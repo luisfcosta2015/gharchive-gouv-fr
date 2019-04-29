@@ -21,7 +21,7 @@
         },
         {
             "name": "ref",
-            "description": "branche referida",
+            "description": "branch referida",
             "example": "refs/heads/master",
             "type": "string",
             "required":true
