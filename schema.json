@@ -1,82 +1,82 @@
 {
-   "title":"Commits sur GitHub par des adresses e-mail en .gouv.fr",
-   "author":"Antoine Augusti <antoine.augusti@data.gouv.fr>",
-   "created":"2019-04-02",
-   "updated":"2019-04-02",
-   "homepage":"https://github.com/AntoineAugusti/gharchive-gouv-fr",
+   "title":"Commits no GitHub por endereços de e-mail em .gov.br",
+   "author":"Luis Felipe Coimbra Costa <luisfcosta@ufrj.gov.br>",
+   "created":"2019-04-29",
+   "updated":"2019-04-29",
+   "homepage":"https://github.com/luisfcosta2015/gharchive-gouv-fr",
     "fields": [
         {
             "name": "id",
-            "description": "Identifiant unique de l'événement",
+            "description": "Identificador único do evento",
             "example": "2489811994",
             "type": "integer",
             "required":true
         },
         {
             "name": "repository_name",
-            "description": "Le nom du répertoire GitHub",
+            "description": "O nome do diretório GitHub",
             "example": "openchordcharts/openchordcharts-sample-data",
             "type": "string",
             "required":true
         },
         {
             "name": "ref",
-            "description": "La branche concernée",
+            "description": "branche referida",
             "example": "refs/heads/master",
             "type": "string",
             "required":true
         },
         {
             "name": "author_email",
-            "description": "L'adresse e-mail de l'auteur du commit",
-            "example": "b445c0e632270b31bc0c900a39de4fc4159fb695@data.gouv.fr",
+            "description": "O endereço de e-mail do autor do commit",
+            "example": "b445c0e632270b31bc0c900a39de4fc4159fb695@gov.br",
             "type": "string",
             "required":true,
             "constraints": {
-                "pattern":".*@.*\\.gouv\\.fr$"
+                "pattern":".*@.*\\.gov\\.br$"
             }
         },
         {
             "name": "author_domain",
-            "description": "Le nom de domaine de l'adresse e-mail de l'auteur du commit",
-            "example": "data.gouv.fr",
+            "description": "O nome de domínio do endereço de e-mail do autor do commit",
+            "example": "gov.br",
             "type": "string",
             "required":true,
             "constraints": {
-                "pattern":".*\\.gouv\\.fr$"
+                "pattern":".*\\.gov\\.br$"
             }
         },
         {
             "name": "author_name",
-            "description": "Le nom de l'auteur du commit",
+            "description": "O nome do autor do commit",
             "example": "Jean Dupont",
             "type": "string",
             "required":true
         },
         {
             "name": "message",
-            "description": "Le message de commit",
+            "description": "A mensagem de commit",
             "example": "WIP",
             "type": "string",
             "required":true
         },
         {
             "name": "sha",
-            "description": "Le SHA1 du commit",
+            "description": "SHA1 do commit",
             "example": "288e534ef881c3973bc413a60370dfa59caf7fbe",
             "type": "string",
             "required":true
         },
         {
             "name": "organisation_name",
-            "description": "Le nom de l'organisation",
-            "example": "betagouv",
+            "description": "O nome da organização",
+            "example": "cultura",
             "type": "string",
             "required":false
         },
         {
             "name": "created_at",
-            "description": "La date de création du commit, en ISO8601",
+            "description": "A data de criação do commit, en ISO8601",
             "example": "2015-01-01T20:40:32Z",
             "type": "datetime",
             "required":true
