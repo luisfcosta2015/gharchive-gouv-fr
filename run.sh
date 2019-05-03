@@ -12,10 +12,10 @@ for i in $(seq -f "%02g" 1 28)
 do
   wget -nc https://data.gharchive.org/$MONTH-$i-{0..23}.json.gz || true
   gunzip -f $MONTH-$i-*.json.gz
-  cat $MONTH-$i-*.json | jq -c 'select( .type == "PushEvent" ) | select(.payload.commits[0].author.email // "" | endswith(".gouv.fr"))' >> $MONTH.json
+  cat $MONTH-$i-*.json | jq -c 'select( .type == "PushEvent" ) | select(.payload.commits[0].author.email // "" | endswith(".gov.br"))' >> $MONTH.json
   rm -f $MONTH-$i-*.json
 done
 
 gunzip -f $MONTH-*.json.gz
-cat $MONTH-*.json | jq -c 'select( .type == "PushEvent" ) | select(.payload.commits[0].author.email // "" | endswith(".gouv.fr"))' >> $MONTH.json
+cat $MONTH-*.json | jq -c 'select( .type == "PushEvent" ) | select(.payload.commits[0].author.email // "" | endswith(".gov.br"))' >> $MONTH.json
 rm -f $MONTH-*
